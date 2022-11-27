@@ -6,6 +6,7 @@
 
 function studentsMarks() {
     let marks = prompt('Enter student marks:');
+    if (!isNaN(marks)){
     if (marks < 0 || marks > 100) {
         alert("Inserted marks out of range");
     }
@@ -28,4 +29,9 @@ function studentsMarks() {
         alert("Invalid input")
     }
 }
-studentsMarks();
+
+else {
+alert("Input is Not a number")
+}
+}
+studentsMarks()
