@@ -5,7 +5,7 @@
 // A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
 
 function studentsMarks() {
-    let marks = prompt('Enter student marks:');
+    let marks = Math.round(prompt('Enter student marks:'));
     if (!isNaN(marks)){
     if (marks < 0 || marks > 100) {
         alert("Inserted marks out of range");
