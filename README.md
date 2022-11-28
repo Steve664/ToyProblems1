@@ -17,7 +17,7 @@
  
  ## Description
  <p>This repository contains solutions to the Week 1 Toy problems solved in javascript</p>
- <pre>
+ <p>
 <b>Challenge 1:</b>Student Grade Generator (Toy Problem)
  Write a function that prompts the user to input student marks. The input should be between 0 and 100. 
  The output should correspond the correct grade, as shown below: 
@@ -31,7 +31,7 @@
  <b>Challenge 3:</b>Net Salary Calculator (Toy Problem)
  Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. 
  Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary.  
- </pre>
+ </p>
  
  ## Set Up
  
