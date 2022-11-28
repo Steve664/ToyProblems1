@@ -5,14 +5,15 @@
 
 //this function handles the net salary calculations
 function salaryCalculator() {
-    //user is promted to input salary
+    //user is promted to input salary. the input is then parsed to int
     const grossPay = parseInt(prompt('Enter gross salary', 0), 10);
-    //nssf is calculated at 6%
+    //nssf rate is calculated at 6%
     let nssf = (0.06 * grossPay);
     //function is called to calculate nhif rate
     let nhif = getNhif(grossPay);
     //function is called to return paye percentage
     let paye = getPaye(grossPay);
+    //net salary is calculated ass gross salary - deductions
     let netSalary = grossPay - (nssf + nhif + (paye * grossPay));
 
     alert(`Gross salary: ${grossPay}
@@ -92,7 +93,7 @@ function getNhif(grossPay) {
     }
 
 }
-//this function calculate the paye amount
+//this function calculate the paye percentage amount
 function getPaye(grossPay) {
     if (grossPay <= 24000) {
         return paye = 0.1;
