@@ -1,4 +1,4 @@
-# Personal-Website
+# Toy Problems week 1
  ##### By Steve Njenga Kariuki
 
 <div id="top"></div>
