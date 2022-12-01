@@ -35,85 +35,85 @@ function salaryCalculator() {
            Net salary: ${netSalary}`);
 }
 //function to calculate nhif rates based on salary
-function getNhif(grossPay) {
-    if (grossPay <= 30000) {
+function getNhif(salary) {
+    if (salary <= 30000) {
         return nhif = 150;
     }
 
-    else if (grossPay >= 6000 && grossPay <= 7999) {
+    else if (salary >= 6000 && salary <= 7999) {
         return nhif = 300;
 
     }
-    else if (grossPay >= 8000 && grossPay <= 11999) {
+    else if (salary >= 8000 && salary <= 11999) {
         return nhif = 400;
 
     }
-    else if (grossPay >= 12000 && grossPay <= 14999) {
+    else if (salary >= 12000 && salary <= 14999) {
         return nhif = 500;
 
     }
-    else if (grossPay >= 15000 && grossPay <= 19999) {
+    else if (salary >= 15000 && salary <= 19999) {
         return nhif = 600;
 
     }
-    else if (grossPay >= 20000 && grossPay <= 24999) {
+    else if (salary >= 20000 && salary <= 24999) {
         return nhif = 750;
 
     }
-    else if (grossPay > 25000 && grossPay <= 29999) {
+    else if (salary > 25000 && salary <= 29999) {
         return nhif = 850;
 
     }
-    else if (grossPay >= 30000 && grossPay <= 34999) {
+    else if (salary >= 30000 && salary <= 34999) {
         return nhif = 900;
 
     }
-    else if (grossPay >= 35000 && grossPay <= 39999) {
+    else if (salary >= 35000 && salary <= 39999) {
         return nhif = 950;
 
     }
-    else if (grossPay > 40000 && grossPay <= 44999) {
+    else if (salary > 40000 && salary <= 44999) {
         return nhif = 1000;
 
     }
-    else if (grossPay > 45000 && grossPay <= 49999) {
+    else if (salary > 45000 && salary <= 49999) {
         return nhif = 1100;
 
     }
-    else if (grossPay > 50000 && grossPay <= 59999) {
+    else if (salary > 50000 && salary <= 59999) {
         return nhif = 1200;
 
     }
-    else if (grossPay >= 60000 && grossPay <= 69999) {
+    else if (salary >= 60000 && salary <= 69999) {
         return nhif = 1300;
 
     }
-    else if (grossPay >= 70000 && grossPay <= 79999) {
+    else if (salary >= 70000 && salary <= 79999) {
         return nhif = 1400;
 
     }
-    else if (grossPay >= 80000 && grossPay <= 89999) {
+    else if (salary >= 80000 && salary <= 89999) {
         return nhif = 1500;
 
     }
-    else if (grossPay >= 90000 && grossPay <= 99999) {
+    else if (salary >= 90000 && salary <= 99999) {
         return nhif = 1600;
 
     }
-    else if (grossPay >= 100000) {
+    else if (salary >= 100000) {
         return nhif = 1700;
     }
 
 }
 //this function calculate the paye percentage amount
-function getPaye(grossPay) {
-    if (grossPay <= 24000) {
+function getPaye(salary) {
+    if (salary <= 24000) {
         return paye = 0.1;
     }
-    else if (grossPay <= 32333) {
+    else if (salary <= 32333) {
         return paye = 0.25;
     }
-    else if (grossPay > 32333) {
+    else if (salary > 32333) {
         return paye = 0.3;
     }
 
