@@ -5,16 +5,28 @@
 
 //this function handles the net salary calculations
 function salaryCalculator() {
-    //user is promted to input salary. the input is then parsed to int
-    const grossPay = parseInt(prompt('Enter gross salary', 0), 10);
+    //user is promted to input basic salary. the input is then parsed to int
+    const basicPay = parseInt(prompt('Enter basic salary', 0), 10);
+    //user is prompted to insert benefits
+    const benefits = parseInt(prompt('Enter benefits', 0), 10);
+    //grosspay = basic pay + benefits
+    let grossPay = basicPay + benefits;
+    //NSSF monthly rates are divided into two equal parts whereby the employer pays 6%
     //nssf rate is calculated at 6%
     let nssf = (0.06 * grossPay);
+    //taxable income = grosspay - deductible reliefs
+    let taxableIncome = grossPay - nssf;
+    //reliefs standard KES 1,408 per month for every taxable income.
+    //insurance relief – This is calculated at 5% of your total Life Insurance premiums
+    // to a maximum relief of KES 5,000/month
+    // for this example it is assumed the maximum applies.
+    let relief = 1408+5000;
     //function is called to calculate nhif rate
     let nhif = getNhif(grossPay);
     //function is called to return paye percentage
-    let paye = getPaye(grossPay);
-    //net salary is calculated ass gross salary - deductions
-    let netSalary = grossPay - (nssf + nhif + (paye * grossPay));
+    let paye = getPaye(taxableIncome-relief);
+    //net salary is calculated as NET PAY = TAXABLE INCOME – PAYE - FBT – DEDUCTIONS AFTER TAX
+    let netSalary = taxableIncome - paye - nhif;
 
     alert(`Gross salary: ${grossPay}
            PAYE: ${paye * grossPay} 
